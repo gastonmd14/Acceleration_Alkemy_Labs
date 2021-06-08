@@ -1,0 +1,52 @@
+{
+  "name": "ong-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www | pino-pretty",
+    "test": "jest --passWithNoTests",
+    "style-check": "yarn run prettier --check .",
+    "style-formatter": "yarn run prettier --write . && git add .",
+    "setup-database": "sequelize-cli db:migrate && sequelize-cli db:seed:all"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.899.0",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^5.3.1",
+    "express-validator": "^6.10.1",
+    "handlebars": "^4.7.7",
+    "hbs": "^4.1.2",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.3",
+    "nodemailer": "^6.6.0",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "nodemailer-handlebars": "^1.0.1",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "pino": "^6.11.3",
+    "sequelize": "^6.6.2",
+    "uuid": "^8.3.2",
+    "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "express-list-endpoints": "^5.0.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.1",
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^4.7.1",
+    "prettier": "^2.3.0",
+    "sequelize-cli": "^6.2.0",
+    "sequelize-mock": "^0.10.2",
+    "supertest": "^6.1.3"
+  }
+}
